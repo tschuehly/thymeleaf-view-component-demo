@@ -7,7 +7,7 @@ import com.example.thymeleafcomponentdemo.core.ExampleService
 class HomeViewComponent(
     private val exampleService: ExampleService,
 ) {
-    fun render() = mapOf(
-        "myProperty" to exampleService.getSomeProperty()
-    )
+    fun render() : Any = mapOf(
+            "myProperty" to exampleService.getSomeProperty()
+        )
 }

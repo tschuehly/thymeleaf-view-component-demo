@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 class Router(
     val homeViewComponent: HomeViewComponent
 ) {
-    @GetMapping("/", produces = [MediaType.TEXT_HTML_VALUE])
+    @GetMapping( "/", produces = [MediaType.TEXT_HTML_VALUE])
     @ResponseBody
     fun homeComponent(): Any {
         return homeViewComponent.render()

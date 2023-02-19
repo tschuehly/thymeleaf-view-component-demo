@@ -8,7 +8,7 @@ import com.example.thymeleafcomponentdemo.core.ExampleService
 class NavigationViewComponent(
     private val exampleService: ExampleService
 ) {
-    fun render() = mapOf(
+    fun render(): Any = mapOf(
         "someOtherProperty" to exampleService.getSomeOtherProperty()
     )
 }
