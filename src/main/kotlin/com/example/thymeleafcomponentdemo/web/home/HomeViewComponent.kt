@@ -23,8 +23,8 @@ class HomeViewComponent(
         data(myContext)
         myContext.setVariable(
             ThymeleafEvaluationContext.THYMELEAF_EVALUATION_CONTEXT_CONTEXT_VARIABLE_NAME,
-            ThymeleafEvaluationContext(applicationContext, null))
-        val htmlTemplate: String = templateEngine.process("HomeViewComponent.html", myContext)
-        return htmlTemplate
+            ThymeleafEvaluationContext(applicationContext, null)
+        )
+        return templateEngine.process("HomeViewComponent.html", myContext)
     }
 }
