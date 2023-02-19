@@ -15,9 +15,6 @@ class ThymeleafComponentDemoApplicationTests {
     @Autowired
     lateinit var navigationViewComponent: NavigationViewComponent
     val restTemplate = TestRestTemplate()
-    @Test
-    fun contextLoads() {
-    }
 
     @Test
     fun testHomeRender(){
