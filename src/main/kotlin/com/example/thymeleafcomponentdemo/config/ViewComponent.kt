@@ -6,7 +6,9 @@ import org.aspectj.lang.annotation.Aspect
 import org.springframework.context.ApplicationContext
 import org.springframework.stereotype.Component
 import org.thymeleaf.context.Context
+import org.thymeleaf.spring6.SpringTemplateEngine
 import org.thymeleaf.spring6.expression.ThymeleafEvaluationContext
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
 
 
 @Target(AnnotationTarget.CLASS)
@@ -28,9 +30,11 @@ class ThymeleafAspect(
             ThymeleafEvaluationContext.THYMELEAF_EVALUATION_CONTEXT_CONTEXT_VARIABLE_NAME,
             ThymeleafEvaluationContext(applicationContext, null)
         )
-        return TemplateEngineConfig.templateEngine(joinPoint.`this`.javaClass)
+        val engine = TemplateEngineConfig.templateEngine(joinPoint.`this`.javaClass)
+
+        return engine
             .process(
-                joinPoint.`this`.javaClass.simpleName.substringBefore("$$") + ".html",
+                joinPoint.`this`.javaClass.simpleName.substringBefore("$$"),
                 htmlContext
             )
     }
