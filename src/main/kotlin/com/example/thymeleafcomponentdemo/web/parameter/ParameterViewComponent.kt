@@ -1,7 +1,7 @@
 package com.example.thymeleafcomponentdemo.web.parameter
 
-import com.example.thymeleafcomponentdemo.config.ViewComponent
 import com.example.thymeleafcomponentdemo.core.ExampleService
+import de.tschuehly.thymeleafviewcomponent.ViewComponent
 
 
 @ViewComponent
