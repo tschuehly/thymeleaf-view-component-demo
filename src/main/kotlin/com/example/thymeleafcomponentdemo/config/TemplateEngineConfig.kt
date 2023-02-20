@@ -1,6 +1,7 @@
 package com.example.thymeleafcomponentdemo.config
 
 import org.thymeleaf.spring6.SpringTemplateEngine
+import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver
 import org.thymeleaf.templateresolver.FileTemplateResolver
 import org.thymeleaf.templateresolver.ITemplateResolver
 

@@ -11,4 +11,8 @@ class ExampleService {
     fun getSomeOtherProperty(): String {
         return "Hello Wim"
     }
+
+    fun getSomethingElse():String{
+        return "This is another Property"
+    }
 }

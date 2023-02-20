@@ -19,7 +19,7 @@ annotation class ViewComponent()
 class ThymeleafAspect(
     val applicationContext: ApplicationContext
 ) {
-    @Around("execution(* render())")
+    @Around("execution(* render()) || execution(* render(*))")
     fun renderInject(joinPoint: ProceedingJoinPoint): Any {
         val contextMap: Map<String, Any> = joinPoint.proceed() as Map<String, Any>
         val htmlContext = Context()
