@@ -8,6 +8,6 @@ class FooterViewComponent (
     private val exampleService: ExampleService,
     ) {
         fun render() : Any = mapOf(
-            "someProperty" to exampleService.getSomeProperty()
+            "helloWorld" to exampleService.getHelloWorld()
         )
 }

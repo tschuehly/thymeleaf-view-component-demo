@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class ExampleService {
-    fun getSomeProperty(): String{
+    fun getHelloWorld(): String{
         return "Hello World"
     }
 
@@ -12,7 +12,11 @@ class ExampleService {
         return "Hello Wim"
     }
 
-    fun getSomethingElse():String{
-        return "This is another Property"
+    fun getCoffee(): String{
+        return "Watch Coffee + Software with Josh Long!"
+    }
+
+    fun getOfficeHours(): String{
+        return "Watch the Spring Office Hours!"
     }
 }

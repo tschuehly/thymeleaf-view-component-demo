@@ -6,18 +6,18 @@ import org.springframework.http.MediaType
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.servlet.ModelAndView
 
 @Controller
 class Router(
     val homeViewComponent: HomeViewComponent
 ) {
     @GetMapping( "/")
-    @ResponseBody
+//    @ResponseBody
     fun homeComponent(): ViewComponentContext {
         return homeViewComponent.render()
     }
 
     @GetMapping("/test")
-    @ResponseBody
-    fun test() = "test"
+    fun test() = ModelAndView("test", mapOf("test" to "test 2"))
 }
