@@ -23,7 +23,7 @@ class ThymeleafComponentDemoApplicationTests {
     @Test
     fun testHomeRender(){
         homeViewComponent.render().also {
-            println(it)
+            println(it.toString())
         }
     }
 

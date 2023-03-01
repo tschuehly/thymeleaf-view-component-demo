@@ -10,8 +10,6 @@ class NavigationViewComponent(
     private val exampleService: ExampleService
 ) {
     fun render() = ViewComponentContext(
-        mapOf(
             "someOtherProperty" to exampleService.getSomeOtherProperty()
-        )
     )
 }

@@ -3,9 +3,15 @@
 <body>
 
 
-<div th:text="${helloWorld}"></div>
-TEST
+<div th:text="${helloWorld}"></div><br>
 
-[(${{@parameterViewComponent.render(null)}})]
+<strong th:text="${coffee}"></strong>
+
+<!--<div th:utext="${{@parameterViewComponent.render(@exampleService.getOfficeHours())}}"></div>-->
+<br>
+<!--[(${{@navigationViewComponent.render()}})]-->
+
+<!--<div th:utext="${{@footerViewComponent.render()}}"></div>-->
+
 </body>
 </html>

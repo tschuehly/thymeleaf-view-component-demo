@@ -9,9 +9,7 @@ import de.tschuehly.thymeleafviewcomponent.ViewComponentContext
 class ParameterViewComponent(
     private val exampleService: ExampleService
 ) {
-    fun render(parameter: String?)= ViewComponentContext(
-        mapOf(
-            "somethingElse" to (parameter ?: exampleService.getCoffee())
-        )
+    fun render(parameter: String?) = ViewComponentContext(
+            "office" to (parameter ?: throw Error("You need to pass in a parameter")),
     )
 }
