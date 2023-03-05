@@ -30,13 +30,13 @@ class ThymeleafComponentDemoApplicationTests {
     @Test
     fun testNavRender(){
         navigationViewComponent.render().also {
-            println(it)
+            println(it.toString())
         }
     }
     @Test
     fun getIndexPage(){
         restTemplate.getForEntity("http://localhost:${port}/",String::class.java).also {
-            println(it)
+            println(it.toString())
         }
     }
 }

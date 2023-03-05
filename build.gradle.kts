@@ -13,6 +13,7 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -20,7 +21,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-aop")
 
-    implementation("de.tschuehly:thymeleaf-view-component")
+    // Use this to develop locally when you include the build locally in your settings.gradle
+//    implementation("de.tschuehly:thymeleaf-view-component")
+
+//  Use this to develop with the version on jitpack
+    implementation("com.github.tschuehly:thymeleaf-view-component:0.2.0")
+
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
