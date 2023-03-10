@@ -22,10 +22,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-aop")
 
     // Use this to develop locally when you include the build locally in your settings.gradle
-//    implementation("de.tschuehly:thymeleaf-view-component")
+    implementation("de.tschuehly:thymeleaf-view-component")
 
 //  Use this to develop with the version on jitpack
-    implementation("com.github.tschuehly:thymeleaf-view-component:0.2.0")
+//    implementation("com.github.tschuehly:thymeleaf-view-component:0.3.0")
 
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")

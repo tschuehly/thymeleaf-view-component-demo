@@ -1,17 +1,13 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
 
+<div view:component="navigationViewComponent"></div>
 
-<div th:text="${helloWorld}"></div><br>
-
-<strong th:text="${coffee}"></strong>
-
-<!--<div th:utext="${{@parameterViewComponent.render(@exampleService.getOfficeHours())}}"></div>-->
+<div th:text="${helloWorld}"></div>
 <br>
-<!--[(${{@navigationViewComponent.render()}})]-->
 
-<!--<div th:utext="${{@footerViewComponent.render()}}"></div>-->
+
+<div view:component="parameterViewComponent.render(coffee)"></div>
 
 </body>
 </html>
