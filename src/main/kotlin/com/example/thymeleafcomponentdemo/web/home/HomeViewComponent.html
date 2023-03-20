@@ -1,12 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
+<script src="http://localhost:35729/livereload.js"></script>
 <body>
 
 <div view:component="navigationViewComponent"></div>
 
 <div th:text="${helloWorld}"></div>
 <br>
-
-
 <div view:component="parameterViewComponent.render(coffee, null)"></div>
 
 </body>

@@ -25,7 +25,7 @@ dependencies {
     implementation("de.tschuehly:thymeleaf-view-component")
 
 //  Use this to develop with the version on jitpack
-//    implementation("com.github.tschuehly:thymeleaf-view-component:0.3.0")
+//    implementation("com.github.tschuehly:thymeleaf-view-component:0.4.0")
 
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
