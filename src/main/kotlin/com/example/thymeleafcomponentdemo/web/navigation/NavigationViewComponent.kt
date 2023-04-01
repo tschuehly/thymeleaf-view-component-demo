@@ -10,7 +10,12 @@ import de.tschuehly.thymeleafviewcomponent.toProperty
 class NavigationViewComponent(
     private val exampleService: ExampleService
 ) {
-    fun render() = ViewContext(
-            "someOtherProperty" toProperty exampleService.getSomeOtherProperty()
-    )
+    var counter = 0
+    fun render(): ViewContext {
+        counter = counter.plus(1)
+        return ViewContext(
+            "someOtherProperty" toProperty exampleService.getSomeOtherProperty(),
+            "counter" toProperty counter
+        )
+    }
 }

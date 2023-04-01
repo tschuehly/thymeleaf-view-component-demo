@@ -3,13 +3,40 @@
      lang="en">
 <head>
     <title>HomeComponent</title>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.6"></script>
 </head>
-<script src="http://localhost:35729/livereload.js"></script>
+
 <body>
-<h1>This is the HomeComponent</h1>
-<div th:text="${helloWorld}"></div>
-<br>
-<div view:component="parameterViewComponent.render(coffee, null)"></div>
+    <h2>This is the HomeComponent</h2>
+    <div th:text="${helloWorld}"></div>
+
+
+
+
+
+
+
+
+
+    <h3>Out of band response Test:</h3>
+    <div id="table" >
+        <div view:component="tableViewComponent"></div>
+
+    </div>
+    <br>
+    <button hx-get="/table-oob" hx-target="#table">Get Site Update</button>
+
+
+
+
+
+
+
+
+
+    <br><br>
+    <div view:component="parameterViewComponent.render(coffee, null)"></div>
 
 </body>
 </html>
